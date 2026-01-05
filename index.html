@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Naveen | Full Stack Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Particle Background -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- Navbar -->
+<header class="navbar">
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#lab">Interactive Lab</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main class="content">
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-inner">
+        <div class="hero-line">
+            <span></span>
+        </div>
+        <div class="hero-text">
+            <h1>Hi, I'm Naveen</h1>
+            <h2>Full Stack Developer & AI Student</h2>
+            <p>
+                I design and build scalable web applications and intelligent systems
+                using Python, Flask, JavaScript, and modern databases.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-grid">
+        <div class="project-card"  onclick="openLink('https://ai-trip-planner-82hp.onrender.com/')">
+            <img src="p1.png" alt="">
+            <p>AI Trip Planner</p>
+        </div>
+
+        <div class="project-card" onclick="openLink('#')">
+            <img src="p2.png" alt="">
+            <p>Mini E-commerce (Shopease)</p>
+        </div>
+
+        <div class="project-card" onclick="openLink('#')">
+            <img src="p3.png" alt="">
+            <p>Online Exam Platform (Quizzen)</p>
+        </div>
+
+        <div class="project-card"
+             onclick="openLink('#')">
+            <img src="p4.png" alt="">
+            <p>AI Trip Planner</p>
+        </div>
+
+        <div class="project-card" onclick="openLink('#')">
+            <img src="p5.png" alt="">
+            <p>Chat Room Creator</p>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Lab -->
+<section id="lab" class="lab">
+    <h2 class="section-title">Interactive Lab</h2>
+
+    <div class="lab-card" onclick="openLab()">
+        <i class="fa-solid fa-diagram-project"></i>
+        <h3>Logic Flow Visualizer</h3>
+        <p>Convert logical steps into a visual flow</p>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I am a Computer Science student specializing in Artificial Intelligence
+        and Full Stack Development. I enjoy building real-world systems,
+        learning core CS concepts, and writing clean, maintainable code.
+    </p>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    © 2025 Naveen. All rights reserved.
+</footer>
+
+<!-- Lab Modal -->
+<div id="labModal" class="modal-overlay" onclick="closeLab(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="close" onclick="closeLab()">×</button>
+        <h3>Logic Flow Visualizer</h3>
+
+        <textarea id="logicInput"
+                  placeholder="Enter steps (one per line)..."></textarea>
+
+        <button onclick="visualize()">Visualize</button>
+
+        <div id="flowResult"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
